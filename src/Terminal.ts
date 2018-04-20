@@ -1026,6 +1026,23 @@ export class Terminal extends EventEmitter implements ITerminal, IDisposable, II
         return;
       }
 
+      //[tmux] resend Mouse Event with true altKey/shiftKey (yong@asial.co.jp)
+      if (!this.selectionManager.shouldForceSelection(ev)) {
+          let obj;
+          for (let prop in ev) {
+              obj[prop] = ev[prop];
+          }
+          if (Browser.isMac) {
+              obj.altKey = true;
+          } else {
+              obj.shiftKey = true;
+          }
+          obj.isTrusted = true;
+          let newEvent = new MouseEvent(ev.type, obj);
+          el.dispatchEvent(newEvent);
+          return;
+      }
+
       // send the button
       sendButton(ev);
 

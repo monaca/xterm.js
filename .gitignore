@@ -1,7 +1,6 @@
 node_modules/
 *.swp
 .lock-wscript
-lib/
 Makefile.gyp
 *.Makefile
 *.target.gyp.mk
@@ -11,7 +10,6 @@ docs/
 npm-debug.log
 /.idea/
 .env
-build/
 .vscode/
 .DS_Store
 fixtures/typings-test/*.js
