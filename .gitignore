@@ -19,5 +19,4 @@ package-lock.json
 /coverage/
 
 # Keep bundled code out of Git
-dist/
 demo/dist/

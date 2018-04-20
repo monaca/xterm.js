@@ -18,7 +18,7 @@ const ts = require('gulp-typescript');
 const util = require('gulp-util');
 const webpack = require('webpack-stream');
 
-const buildDir = process.env.BUILD_DIR || 'build';
+const buildDir = 'dist'; //process.env.BUILD_DIR || 'build';
 const tsProject = ts.createProject('tsconfig.json');
 const srcDir = tsProject.config.compilerOptions.rootDir;
 let outDir = tsProject.config.compilerOptions.outDir;
