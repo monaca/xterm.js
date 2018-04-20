@@ -11,6 +11,5 @@ docs/
 npm-debug.log
 /.idea/
 .env
-build/
 .vscode/
 .git/
